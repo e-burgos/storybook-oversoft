@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import IconAttrs from "../utils/IconAttrs.styles";
+import styled from 'styled-components';
+import IconAttrs from '../utils/IconAttrs.styles';
 
 interface StyledCircleProps {
   color?: string;

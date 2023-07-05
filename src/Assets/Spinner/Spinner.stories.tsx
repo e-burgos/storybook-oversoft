@@ -21,3 +21,10 @@ export const SpinnerStory: Story = {
     iconColor: colors.primary.red,
   },
 };
+
+export const SpinnerSmallStory: Story = {
+  args: {
+    size: 20,
+    iconColor: colors.secondary.blue,
+  },
+};

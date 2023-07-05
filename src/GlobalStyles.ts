@@ -1,54 +1,54 @@
-import { createGlobalStyle, css } from "styled-components";
-import colors from "./color-palette";
+import { createGlobalStyle, css } from 'styled-components';
+import colors from './color-palette';
 
 const Fonts = css`
   @font-face {
-    font-family: "Poppins-Thin";
+    font-family: 'Poppins-Thin';
     font-style: normal;
     font-weight: 100;
-    src: url("/assets/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+    src: url('/assets/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "Poppins-Light";
+    font-family: 'Poppins-Light';
     font-style: normal;
     font-weight: 300;
-    src: url("/assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+    src: url('/assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "Poppins-Medium";
+    font-family: 'Poppins-Medium';
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+    src: url('/assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "Poppins-Regular";
+    font-family: 'Poppins-Regular';
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    src: url('/assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "Poppins-SemiBold";
+    font-family: 'Poppins-SemiBold';
     font-style: normal;
     font-weight: 700;
-    src: url("/assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+    src: url('/assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "Poppins-Bold";
+    font-family: 'Poppins-Bold';
     font-style: normal;
     font-weight: 800;
-    src: url("/assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+    src: url('/assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: "Poppins-ExtraBold";
+    font-family: 'Poppins-ExtraBold';
     font-style: normal;
     font-weight: 800;
-    src: url("/assets/fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
+    src: url('/assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
   }
 `;
 
@@ -180,7 +180,7 @@ const CssReset = css`
   blockquote:after,
   q:before,
   q:after {
-    content: "";
+    content: '';
     content: none;
   }
 
@@ -199,22 +199,12 @@ const CssReset = css`
 const getColorPalleteCssVariables = () => {
   const colorPalette: string[] = [];
   Object.keys(colors).forEach((type) => {
-    if (typeof colors[type as keyof typeof colors] === "string")
-      colorPalette.push(
-        "--" + type + ": " + colors[type as keyof typeof colors] + ";"
-      );
+    if (typeof colors[type as keyof typeof colors] === 'string')
+      colorPalette.push('--' + type + ': ' + colors[type as keyof typeof colors] + ';');
     else {
       Object.keys(colors[type as keyof typeof colors]).forEach((color) => {
         const colorType = colors[type as keyof typeof colors];
-        colorPalette.push(
-          "--" +
-            type +
-            "-" +
-            color +
-            ": " +
-            colorType[color as keyof typeof colorType] +
-            ";"
-        );
+        colorPalette.push('--' + type + '-' + color + ': ' + colorType[color as keyof typeof colorType] + ';');
       });
     }
   });

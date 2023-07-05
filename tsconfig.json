@@ -21,9 +21,7 @@
     "experimentalDecorators": true, // Enables experimental support for ES decorators
     "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
   },
-  "include": [
-    "src/**/*" // *** The files TypeScript should type check ***
-  ],
-  "exclude": ["node_modules", "build"], // *** The files to not type check ***
+  "include": ["./src/*", "./src/**/*"],
+  "exclude": ["./src/**/*.stories.tsx", "./src/**/*.test.tsx", "./src/**/*.snap"],
   "plugins": [{ "name": "typescript-tslint-plugin" }]
 }
