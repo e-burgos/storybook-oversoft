@@ -43,8 +43,8 @@ Como resultado tendremos la ruta del componente de la siguente manera `src/Asset
 
 ## Conexion de componentes con Chromatic
 
-1. A cargo de Jorge Garcia
-
+1. Para publicar la libreria en chromatic solo se debe corren el comando `npm run chomatic`.
+2. Esperar a que finalice, al finalizar debe mostrar el link del proyecto actualizado.
 
 ## Prueba local de los componentes
 
@@ -52,7 +52,7 @@ Como resultado tendremos la ruta del componente de la siguente manera `src/Asset
 2. Hacer un `npm run test` para correr todas las pruebas.
 3. Hacer un `npm run dist` para generar los archivos .js y .d dentro la carpeta dist.
 4. Es necesario agregar en el archivo src/index.ts la importación y exportacion de todos los componentes.
-4. Dentro de tu proyecto de React, instalar el paquete recién generado con el comando `npm i storybook-oversoft`.
+5. Dentro de tu proyecto de React, instalar el paquete recién generado con el comando `npm i storybook-oversoft`.
 
 ## Versionado Semántico
 
@@ -107,8 +107,9 @@ export default function Header(){
 
 # Links utiles:
 
-- **_oversoft Ui Storybook:_** https://www.chromatic.com/
-- **_oversoft Ui Repo/Gitlab:_** #
+- **_oversoft Ui Storybook:_** https://www.chromatic.com/library?appId=64a6dbac61ad3a417c9476a7
+- **_oversoft Ui Storybook Invite:_** https://www.chromatic.com/start?inviteToken=chpi_6fcbfe84fb9a4124a1eb89638fc1ebf6&appId=64a6dbac61ad3a417c9476a7
+- **_oversoft Ui Repo/GitHub:_** https://github.com/e-burgos/storybook-oversoft
 - **_oversoft Ui Trello:_** https://trello.com/b/3Hb6LxJ7/oversoft-ui-trello
 - **_oversoft Ui Trello Invite:_** https://trello.com/invite/b/3Hb6LxJ7/ATTI7280debd5dd8ae26c2d392f864c75e3297B25540/oversoft-ui-trello
 

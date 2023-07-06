@@ -16,7 +16,7 @@
     "lint-js": "eslint 'src/**/*.{js,jsx}' --quiet --fix",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --build-script-name build",
+    "chromatic": "npx chromatic@next --project-token=$CHROMATIC_PROJECT_TOKEN --build-script-name build",
     "dist": "rm -rf dist && npx tsc -p ./tsconfigDist.json"
   },
   "eslintConfig": {
@@ -74,7 +74,7 @@
     "@typescript-eslint/parser": "^5.61.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-named-exports-order": "^0.0.2",
-    "chromatic": "^6.19.9",
+    "chromatic": "^6.19.8",
     "eslint": "^8.44.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
