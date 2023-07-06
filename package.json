@@ -1,5 +1,6 @@
 {
   "name": "oversoft-storybook",
+  "main": "./dist/index.js",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,6 +17,7 @@
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --build-script-name build"
+    "dist": "rm -rf dist && npx tsc -p ./tsconfigDist.json"
   },
   "eslintConfig": {
     "extends": [
