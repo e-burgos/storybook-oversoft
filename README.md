@@ -45,12 +45,14 @@ Como resultado tendremos la ruta del componente de la siguente manera `src/Asset
 
 1. A cargo de Jorge Garcia
 
+
 ## Prueba local de los componentes
 
 1. Hacer un `npm run build` de la libería para compilar los componentes.
-2. Hacer un `npm rin dist` para generar un paquete **.tgz** en la raiz del repositorio. El nombre del paquete se corresponde al _name_ y _version_ que tengas en tu `package.json` (por ejemplo, _oversoft-ui-0.x.x.tgz_).
-3. Mover el paquete generado a la raiz del proyecto de React donde lo quieras probar con el comando `mv oversoft-ui-0.x.x.tgz {path-proyecto}`.
-4. Dentro de tu proyecto de React, instalar el paquete recién generado con el comando `npm i ./oversoft-ui-0.x.x.tgz`.
+2. Hacer un `npm run test` para correr todas las pruebas.
+3. Hacer un `npm run dist` para generar los archivos .js y .d dentro la carpeta dist.
+4. Es necesario agregar en el archivo src/index.ts la importación y exportacion de todos los componentes.
+4. Dentro de tu proyecto de React, instalar el paquete recién generado con el comando `npm i storybook-oversoft`.
 
 ## Versionado Semántico
 
@@ -95,7 +97,7 @@ Ej práctico:
 
 ```JSX
 import React from 'react';
-import LeftArrow from '@oversoft/oversoft-ui/dist/Assets/LeftArrow';
+import { LeftArrow } from '@oversoft/oversoft-ui';
 
 export default function Header(){
     ...
