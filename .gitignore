@@ -12,6 +12,7 @@
 # production
 /build
 /lib
+/dist
 
 # misc
 .DS_Store
@@ -29,6 +30,7 @@ yarn-error.log*
 *.tgz
 
 storybook-static
+build-storybook.log
 
 .prettierrc.json
 .prettierignore
