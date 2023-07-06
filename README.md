@@ -1,46 +1,113 @@
-# Getting Started with Create React App
+# Way of Working
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En la siguiente documentacion se detalla un flujo de trabajo sugerido para desarrollar la libreria de componentes
+_oversoft-ui_.
 
-## Available Scripts
+# Desarrollo
 
-In the project directory, you can run:
+Tener en cuenta antes de empezar un desarrollo en fijarse si ya existe ese componente. Para esto, pueden entrar a Chromatic
+y fijarse si esta el componente conectado, o entrar en el storybook, o entrar en el trello y fijarse si hay una tarjeta
+de ese componente.
 
-### `npm start`
+## Trello
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+La herramienta de Trello la utilizamos para tener un seguimiento de los componentes que desarrollamos. Tambien se usa
+para estar sincronizados entre devs en cuanto a los componentes, para no pisarnos y en caso de que haya dos mesas que
+usan un mismo componente se ubica en la columna _(In Progress)_ la etiqueta _(High Priority)_ en la tarjeta del componente y asi el dev que lo hace lo desarrolla lo mas rapido
+posible. Despues, cada columna es autoexplicativa.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**TODOS LOS COMPONENTES TIENEN QUE TENER SU TARJETA EN TRELLO.** Esto es para tener buen seguimiento de lo desarrollado.
 
-### `npm test`
+## Estructura de carpetas/archivos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Cada componente va a estar contenido dentro de `src/`, lo vamos a desarrollar en la ruta
+`/src/CarpetaPadre/CapetaDelComponente/` y el arbol de archivos que vamos a generar en esa carpeta sera el
+siguiente:
 
-### `npm run build`
+```
+- index.tsx
+- LeftArrow.tsx
+- LeftArrow.stories.tsx
+- LeftArrow.styles.ts
+- LeftArrow.test.tsx
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Como resultado tendremos la ruta del componente de la siguente manera `src/Assets/LeftArrow`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Gitflow
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Se crea una rama por componente con el nombre/ruta del componente.
+- Cuando se finaliza el desarrollo chequear cual es la ultima version publicada de la libreria e incrementar la
+  version correspondiente con `npm version (patch || minor || major)`.
+- Se hace un merge request a `develop` y si es necesario se asigna un revisor de codigo.
 
-### `npm run eject`
+## Conexion de componentes con Chromatic
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. A cargo de Jorge Garcia
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Prueba local de los componentes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. Hacer un `npm run build` de la libería para compilar los componentes.
+2. Hacer un `npm rin dist` para generar un paquete **.tgz** en la raiz del repositorio. El nombre del paquete se corresponde al _name_ y _version_ que tengas en tu `package.json` (por ejemplo, _oversoft-ui-0.x.x.tgz_).
+3. Mover el paquete generado a la raiz del proyecto de React donde lo quieras probar con el comando `mv oversoft-ui-0.x.x.tgz {path-proyecto}`.
+4. Dentro de tu proyecto de React, instalar el paquete recién generado con el comando `npm i ./oversoft-ui-0.x.x.tgz`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Versionado Semántico
 
-## Learn More
+La propuesta con respecto al versionado es usar como referencia el estandar de versionado semantico
+([SemVer](https://semver.org/lang/es/)) y/o adaptarlo en la medida que veamos que es necesario. Tendriamos una version
+con 3 campos: **MAJOR.MINOR.PATCH**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Por cada nuevo fix/patch a cualquiera de los componentes de la version actual, que sea retrocompatible, se va a
+  incrementar en 1 la **PATCH** version (`npm version patch`).
+- Si se introducen nuevos componentes/funcionalidades tambien compatibles con la version actual, se incrementa la
+  **MINOR** version en 1 y se reseta el PATCH a 0 (este reset ya lo hace solo _npm_ si usan el comando
+  `npm version minor` para incrementar la version).
+- Para la **primer version estable** de la libreria, se incrementara la **MAJOR** version de 0.x.x a 1.0.0 y se
+  resetean minor y patch a 0 (`npm version major`). Queda a definir que criterios vamos a usar para publicar esta
+  version.
+- Por cada nuevo cambio que **no sea compatible** con la version anterior de la libreria se incrementa la **MAJOR**
+  version en 1.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Funcion del pipeline
+
+El pipeline es el encargado de ejecutar los tests, publicar la nueva version de la libreria y ademas de deployar el
+Storybook con el nuevo componente. Todo esto se hace automaticamente cuando se _pushea_ a la rama `develop` (Por nuestro
+gitflow, se hace una nueva rama y despues se hace un merge request. Una vez mergeada la nueva rama en develop se ejecuta
+el pipeline automaticamente)
+
+# Instalación y utilización de la libreria
+
+## Instalación
+
+1. Tener visibilidad de https://devops.oversoft.com.ar/gitlab en la intranet (vpn).
+2. Crear archivo `.npmrc` o `.yarnrc` _(dependiendo del manejador de paquetes que se use)_ con la sigiente
+   linea/registry: `@oversoft:registry=https://devops.oversoft.com.ar/gitlab/api/v4/packages/npm/`
+3. Ejecutar comando `npm install @oversoft/oversoft-ui` o con yarn `yarn add @oversoft/oversoft-ui`
+
+## Utilización
+
+Se importa el componente con la base de `@oversoft/oversoft-ui/dist` y despues el nombre completo del componente. Las
+carpetas tienen un index, por lo que no hace falta llamar al componente .tsx en especifico. Por ejemplo, el import del
+componente `Assets/LeftArrow` sería `@oversoft/oversoft-ui/dist/Assets/LeftArrow`
+
+Ej práctico:
+
+```JSX
+import React from 'react';
+import LeftArrow from '@oversoft/oversoft-ui/dist/Assets/LeftArrow';
+
+export default function Header(){
+    ...
+    return <LeftArrow size={45}/>
+}
+```
+
+# Links utiles:
+
+- **_oversoft Ui Storybook:_** https://www.chromatic.com/
+- **_oversoft Ui Repo/Gitlab:_** #
+- **_oversoft Ui Trello:_** https://trello.com/b/3Hb6LxJ7/oversoft-ui-trello
+- **_oversoft Ui Trello Invite:_** https://trello.com/invite/b/3Hb6LxJ7/ATTI7280debd5dd8ae26c2d392f864c75e3297B25540/oversoft-ui-trello
+
+_Readme version: 1.0_
