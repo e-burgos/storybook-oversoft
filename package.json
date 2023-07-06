@@ -1,5 +1,6 @@
 {
   "name": "oversoft-storybook",
+  "main": "./dist/index.js",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +15,8 @@
     "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint-js": "eslint 'src/**/*.{js,jsx}' --quiet --fix",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "dist": "rm -rf dist && npx tsc -p ./tsconfigDist.json"
   },
   "eslintConfig": {
     "extends": [
