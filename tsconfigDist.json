@@ -1,0 +1,18 @@
+
+{
+  "exclude": ["jest.setup.ts", "./src/**/*.stories.tsx", "./src/**/*.test.tsx", "./src/**/*.snap"],
+  "compilerOptions": {
+    "target": "es6",                                    
+    "lib": ["dom","es6"],                                
+    "jsx": "react",                                      
+    "module": "commonjs",                                
+    "rootDir": "src",                                    
+    "declaration": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
