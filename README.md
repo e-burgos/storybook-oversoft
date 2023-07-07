@@ -113,4 +113,8 @@ export default function Header(){
 - **_oversoft Ui Trello:_** https://trello.com/b/3Hb6LxJ7/oversoft-ui-trello
 - **_oversoft Ui Trello Invite:_** https://trello.com/invite/b/3Hb6LxJ7/ATTI7280debd5dd8ae26c2d392f864c75e3297B25540/oversoft-ui-trello
 
+# Library Docs:
+
+- **_DataTable Docs:_** https://react-data-table-component.netlify.app/?path=/story/getting-started-intro--page
+
 _Readme version: 1.0_

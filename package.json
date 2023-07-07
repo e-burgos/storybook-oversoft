@@ -16,7 +16,7 @@
     "lint-js": "eslint 'src/**/*.{js,jsx}' --quiet --fix",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "chromatic": "npx chromatic@next --project-token=$CHROMATIC_PROJECT_TOKEN --build-script-name build",
+    "chromatic": "npx chromatic@next --project-token=$CHROMATIC_PROJECT_TOKEN --build-script-name build --exit-once-uploaded",
     "dist": "rm -rf dist && npx tsc -p ./tsconfigDist.json"
   },
   "eslintConfig": {
