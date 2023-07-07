@@ -9,7 +9,7 @@ test('Check default icon values of Users', () => {
   expect(screen.getByTestId('Users').tagName).toEqual('svg');
   expect(screen.getByTestId('Users')).toHaveAttribute('width', '26');
   expect(screen.getByTestId('Users')).toHaveAttribute('height', '26');
-  expect(screen.getByTestId('Users')).toHaveAttribute('fill', colors.neutrals.blackSixty);
+  expect(screen.getByTestId('Users')).toHaveAttribute('fill', colors.neutrals.greyTwo);
   expect(screen.getByTestId('Users')).toHaveAttribute('viewBox', '0 0 18 16');
 });
 

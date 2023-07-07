@@ -3,52 +3,52 @@ import colors from './color-palette';
 
 const Fonts = css`
   @font-face {
-    font-family: 'Poppins-Thin';
+    font-family: 'Rubik-Black';
     font-style: normal;
     font-weight: 100;
-    src: url('/assets/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik/Rubik-Black.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Poppins-Light';
+    font-family: 'Rubik-Light';
     font-style: normal;
     font-weight: 300;
-    src: url('/assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik/Rubik-Light.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Poppins-Medium';
+    font-family: 'Rubik-Medium';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik/Rubik-Medium.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Poppins-Regular';
+    font-family: 'Rubik-Regular';
     font-style: normal;
     font-weight: 400;
-    src: url('/assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik/Rubik-Regular.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Poppins-SemiBold';
+    font-family: 'Rubik-SemiBold';
     font-style: normal;
     font-weight: 700;
-    src: url('/assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik/Rubik-SemiBold.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Poppins-Bold';
+    font-family: 'Rubik-Bold';
     font-style: normal;
     font-weight: 800;
-    src: url('/assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik/Rubik-Bold.ttf') format('truetype');
   }
 
   @font-face {
-    font-family: 'Poppins-ExtraBold';
+    font-family: 'Rubik-ExtraBold';
     font-style: normal;
     font-weight: 800;
-    src: url('/assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+    src: url('/assets/fonts/Rubik/Rubik-ExtraBold.ttf') format('truetype');
   }
 `;
 

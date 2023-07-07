@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import LeftArrow from './LeftArrow';
 
 const meta: Meta = {
-  title: 'Oversoft UI/Assets/LeftArrow',
+  title: 'Assets/LeftArrow',
   component: LeftArrow,
   tags: ['autodocs'],
   argTypes: {
