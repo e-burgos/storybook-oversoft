@@ -1,8 +1,8 @@
 const primary = {
-  red: '#FF3E6C',
-  redGradient: `linear-gradient(#FF8CA8,#FF3E6C)`,
-  redLight: '#FF3E6C33',
-  redExtraLight: '#F8F0F5',
+  red: '#D41F34',
+  redGradient: `linear-gradient(#D41F3450,#D41F34)`,
+  redLight: '#D41F3450',
+  redExtraLight: '#D41F3433',
 };
 
 const secondary = {
@@ -22,12 +22,14 @@ const secondary = {
 
 const neutrals = {
   black: '#000000',
-  blackSixty: '#5F5F79',
-  blackThirty: '#88889A',
+  greyOne: '#333333',
+  greyTwo: '#666666',
+  greyThree: '#9D9D9D',
+  greyLight: '#FAFAFA',
   white: '#FFFFFF',
 };
 
-const background = '#F3F5F6';
+const background = '#FAFAFA';
 
 const colors = { primary, secondary, neutrals, background };
 

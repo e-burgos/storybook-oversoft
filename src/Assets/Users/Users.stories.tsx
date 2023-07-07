@@ -3,7 +3,7 @@ import Users from './Users';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Oversoft UI/Assets/Users',
+  title: 'Assets/Users',
   component: Users,
   tags: ['autodocs'],
   argTypes: {
@@ -18,6 +18,6 @@ type Story = StoryObj<typeof meta>;
 export const UsersStory: Story = {
   args: {
     size: 26,
-    iconColor: colors.neutrals.blackSixty,
+    iconColor: colors.neutrals.greyTwo,
   },
 };

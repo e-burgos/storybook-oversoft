@@ -3,7 +3,7 @@ import Spinner from './Spinner';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Oversoft UI/Assets/Spinner',
+  title: 'Assets/Spinner',
   component: Spinner,
   tags: ['autodocs'],
   argTypes: {
