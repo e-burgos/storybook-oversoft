@@ -1,0 +1,16 @@
+version: '1.0'
+services:
+  oversoft-storybook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: oversoft-storybook
+    container_name: oversoft-storybook
+    restart: unless-stopped
+    ports:
+      - '80:80'
+    networks:
+      - storybook-network
+networks:
+  storybook-network:
+    driver: bridge
