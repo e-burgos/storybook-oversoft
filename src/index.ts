@@ -1,3 +1,4 @@
 import CloseButton from './buttons/CloseButton/CloseButton';
+import Input from './Form/Input';
 
-export { CloseButton };
+export { Input, CloseButton };
