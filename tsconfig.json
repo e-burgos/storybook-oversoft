@@ -19,7 +19,9 @@
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
     "experimentalDecorators": true, // Enables experimental support for ES decorators
-    "noFallthroughCasesInSwitch": true // Report errors for fallthrough cases in switch statement
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    "outDir": "./dist" /* Redirect output structure to the directory. */,
+    "rootDir": "./src/"
   },
   "include": ["./src/*", "./src/**/*"],
   "exclude": ["./src/**/*.stories.tsx", "./src/**/*.test.tsx", "./src/**/*.snap"],
