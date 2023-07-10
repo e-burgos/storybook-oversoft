@@ -1,9 +1,9 @@
-export { default as Assets_RightArrow } from './Assets/RightArrow';
+export { default as Assets_Users } from './Assets/Users';
 export { default as Buttons_BaseButton } from './Buttons/BaseButton';
 export { default as Buttons_CloseButton } from './Buttons/CloseButton';
+export { default as Tables_DataTable } from './Tables/DataTable';
 export { default as Form_Input } from './Form/Input';
 export { default as Tables_TablePagination } from './Tables/TablePagination';
-export { default as Assets_LeftArrow } from './Assets/LeftArrow';
+export { default as Assets_RightArrow } from './Assets/RightArrow';
 export { default as Assets_Spinner } from './Assets/Spinner';
-export { default as Tables_DataTable } from './Tables/DataTable';
-export { default as Assets_Users } from './Assets/Users';
+export { default as Assets_LeftArrow } from './Assets/LeftArrow';

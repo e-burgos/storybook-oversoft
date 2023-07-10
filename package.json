@@ -1,21 +1,19 @@
 {
-  "name": "oversoft-storybook",
+  "name": "oversoft-ui",
   "main": "./dist/index.js",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.1",
+  "private": false,
   "scripts": {
     "dev": "storybook dev -p 6006",
     "start": "npx http-server -p 8080 ./storybook-static",
     "build": "storybook build",
     "docs": "storybook dev --docs",
-    "publish": "npm run clean && npm run export-components && npm run dist && npm run publish-version && npm run publish-package && npm run build",
+    "publish": "npm run clean && npm run export-components && npm run dist && npm run publish-version && npm run build && npm run chromatic",
     "export-components": "rm -rf ./src/index.tsx && node ./scripts/exportComponentsFromIndex",
     "publish-version": "node ./scripts/setPublishJson",
-    "publish-package": "tar -pczf oversoft-storybook.tgz dist/",
     "test": "jest test --coverage --watchAll=false --passWithNoTests",
     "test-watch": "jest test --watch --coverage",
     "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "lint-js": "eslint 'src/**/*.{js,jsx}' --quiet --fix",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
     "clean": "node ./scripts/rmdir storybook-static",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
@@ -114,6 +112,9 @@
       "eslint --fix"
     ]
   },
+  "files": [
+    "dist"
+  ],
   "readme": "ERROR: No README data found!",
   "_id": "oversoft-storybook@0.1.0"
 }
