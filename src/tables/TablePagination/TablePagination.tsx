@@ -1,8 +1,8 @@
-import { StyledTablePagination, StyledContentPagination } from './TablePagination.styles';
+import React from 'react';
 import { PaginationComponentProps } from 'react-data-table-component';
 import colors from '../../color-palette';
-import React from 'react';
-import BaseButton from '../../buttons/BaseButton';
+import BaseButton from '../../Buttons/BaseButton';
+import { StyledContentPagination, StyledTablePagination } from './TablePagination.styles';
 
 const TablePagination = ({ rowsPerPage, rowCount, currentPage, onChangePage }: PaginationComponentProps) => {
   const totalPages = Math.ceil(rowCount / rowsPerPage);

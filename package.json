@@ -9,7 +9,7 @@
     "build": "storybook build",
     "docs": "storybook dev --docs",
     "publish": "npm run clean && npm run export-components && npm run dist && npm run publish-version && npm run publish-package && npm run build",
-    "export-components": "node ./scripts/exportComponentsFromIndex",
+    "export-components": "rm -rf ./src/index.tsx && node ./scripts/exportComponentsFromIndex",
     "publish-version": "node ./scripts/setPublishJson",
     "publish-package": "tar -pczf oversoft-storybook.tgz dist/",
     "test": "jest test --coverage --watchAll=false --passWithNoTests",
