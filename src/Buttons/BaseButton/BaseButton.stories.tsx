@@ -22,7 +22,6 @@ type Story = StoryObj<typeof meta>;
 
 export const CustomButtonStory: Story = {
   args: {
-    typeButton: 'custom',
     backgroundColor: colors.primary.red,
     hoverBgColor: colors.primary.redGradient,
     disableBgColor: colors.primary.redLight,

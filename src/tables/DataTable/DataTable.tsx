@@ -4,7 +4,7 @@ import colors from '../../color-palette';
 import TablePagination from '../TablePagination';
 import React from 'react';
 
-const customStyles: TableStyles = {
+const customDatatableStyles: TableStyles = {
   table: {
     style: {
       verflowX: 'auto',
@@ -76,7 +76,7 @@ const DataTable: typeof Datatable = (props) => {
         paginationComponent={TablePagination}
         {...props}
         // eslint-disable-next-line react/prop-types
-        customStyles={{ ...customStyles, ...props.customStyles }}
+        customStyles={{ ...customDatatableStyles, ...props.customStyles }}
       />
     </StyledTableContainer>
   );

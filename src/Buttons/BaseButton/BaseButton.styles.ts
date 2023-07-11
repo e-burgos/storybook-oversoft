@@ -3,23 +3,23 @@ import colors from '../../color-palette';
 import { IFontFamily } from '../../types';
 
 interface TitleProps {
-  colorText?: string;
-  hoverColorText?: string;
-  textSize?: string;
-  fontText?: IFontFamily;
+  $colorText?: string;
+  $hoverColorText?: string;
+  $textSize?: string;
+  $fontText?: IFontFamily;
 }
 
 interface ButtonProps {
-  backgroundColor?: string;
+  $backgroundColor?: string;
   width?: string;
   height?: string;
-  borderRadius?: string;
+  $borderRadius?: string;
   disabled?: boolean;
   $loading?: boolean;
-  hoverBgColor?: string;
-  borderColor?: string;
+  $hoverBgColor?: string;
+  $borderColor?: string;
   border?: string;
-  hoverBorderColor?: string;
+  $hoverBorderColor?: string;
   padding?: string;
 }
 
@@ -31,15 +31,15 @@ export const Button = styled.button<ButtonProps>`
   height: ${(props) => (props.height ? props.height : '45px')};
   padding: ${(props) => props.padding || '18px 12px'};
   border: ${(props) => props.border};
-  border-color: ${(props) => props.borderColor};
-  border-style: ${(props) => (props.borderColor ? 'solid' : 'none')};
-  border-radius: ${(props) => props.borderRadius || '8px'};
-  background: ${(props) => props.backgroundColor || colors.neutrals.white};
+  border-color: ${(props) => props.$borderColor};
+  border-style: ${(props) => (props.$borderColor ? 'solid' : 'none')};
+  border-radius: ${(props) => props.$borderRadius || '8px'};
+  background: ${(props) => props.$backgroundColor || colors.neutrals.white};
   cursor: ${(props) => (props.disabled || props.$loading ? 'not-allowed' : 'pointer')};
   &:hover {
-    background: ${(props) => props.hoverBgColor};
-    border-style: ${(props) => (props.hoverBorderColor ? 'solid' : 'none')};
-    border-color: ${(props) => props.hoverBorderColor};
+    background: ${(props) => props.$hoverBgColor};
+    border-style: ${(props) => (props.$hoverBorderColor ? 'solid' : 'none')};
+    border-color: ${(props) => props.$hoverBorderColor};
   }
 `;
 
@@ -49,12 +49,12 @@ export const Title = styled.span<TitleProps>`
   align-items: center;
   width: 100%;
   height: 100%;
-  font-family: ${(props) => (props.fontText ? props.fontText : 'Rubik-Regular')};
-  font-size: ${(props) => (props.textSize ? props.textSize : '12px')};
+  font-family: ${(props) => (props.$fontText ? props.$fontText : 'Rubik-Regular')};
+  font-size: ${(props) => (props.$textSize ? props.$textSize : '12px')};
   text-align: center;
-  color: ${(props) => props.colorText};
+  color: ${(props) => props.$colorText};
   &:hover {
-    color: ${(props) => props.hoverColorText};
+    color: ${(props) => props.$hoverColorText};
   }
 `;
 

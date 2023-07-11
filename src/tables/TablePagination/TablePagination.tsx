@@ -11,18 +11,18 @@ const TablePagination = ({ rowsPerPage, rowCount, currentPage, onChangePage }: P
   const middleNumber = currentPage === 1 || currentPage === totalPages ? '' : currentPage;
   return (
     <StyledTablePagination
-      display="flex"
-      flexDirection="row"
-      justifyContent="flex-end"
-      alignItems="center"
+      $display="flex"
+      $flexDirection="row"
+      $justifyContent="flex-end"
+      $alignItems="center"
       style={{ position: 'relative' }}
       data-testid="table-pagination"
     >
       <StyledContentPagination
-        display="flex"
-        flexDirection="row"
-        justifyContent="center"
-        alignItems="center"
+        $display="flex"
+        $flexDirection="row"
+        $justifyContent="center"
+        $alignItems="center"
         width="fit-content"
         height="20px"
         style={{ position: 'absolute', top: '10px' }}

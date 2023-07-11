@@ -1,7 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import TablePagination from './TablePagination';
 import React from 'react';
-import colors from '../../color-palette';
 
 const onChangePageFnMk = jest.fn();
 
@@ -103,8 +102,6 @@ test('Check table pagination case 2', () => {
   expect(screen.getByText('❮')).toBeInTheDocument();
   expect(screen.getByLabelText('Página 1')).toBeInTheDocument();
   expect(screen.getByLabelText('Página 2')).toBeInTheDocument();
-  expect(screen.getByLabelText('Página 2')).toHaveAttribute('backgroundcolor', colors.primary.red);
-  expect(screen.getByLabelText('Página 2').firstChild).toHaveAttribute('colortext', colors.neutrals.white);
   expect(screen.getByLabelText('Página 3')).toBeInTheDocument();
   expect(screen.getByText('❯')).toBeInTheDocument();
 });

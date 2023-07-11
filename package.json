@@ -1,7 +1,7 @@
 {
   "name": "oversoft-ui",
   "main": "./dist/index.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "scripts": {
     "dev": "storybook dev -p 6006",

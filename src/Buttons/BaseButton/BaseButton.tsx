@@ -49,12 +49,12 @@ const BaseButton = ({
   return (
     <Button
       role="button"
-      backgroundColor={disabled ? `${backgroundColor}30` : backgroundColor}
-      hoverBgColor={disabled ? `${backgroundColor}30` : hoverBgColor}
-      borderColor={borderColor}
-      hoverBorderColor={hoverBorderColor}
+      $backgroundColor={disabled ? `${backgroundColor}30` : backgroundColor}
+      $hoverBgColor={disabled ? `${backgroundColor}30` : hoverBgColor}
+      $borderColor={borderColor}
+      $hoverBorderColor={hoverBorderColor}
       disabled={disabled}
-      borderRadius={borderRadius}
+      $borderRadius={borderRadius}
       border={border}
       padding={padding}
       $loading={loading}
@@ -68,10 +68,10 @@ const BaseButton = ({
           <Spinner iconColor={spinnerColor} margin="0 5px 0 0" />
           <Title
             data-testid="heading"
-            colorText={colorText}
-            textSize={textSize}
-            hoverColorText={hoverColorText}
-            fontText={fontText}
+            $colorText={colorText}
+            $textSize={textSize}
+            $hoverColorText={hoverColorText}
+            $fontText={fontText}
           >
             {label}
           </Title>
@@ -79,10 +79,10 @@ const BaseButton = ({
       ) : (
         <Title
           data-testid="heading"
-          colorText={colorText}
-          textSize={textSize}
-          hoverColorText={hoverColorText}
-          fontText={fontText}
+          $colorText={colorText}
+          $textSize={textSize}
+          $hoverColorText={hoverColorText}
+          $fontText={fontText}
         >
           {label}
         </Title>

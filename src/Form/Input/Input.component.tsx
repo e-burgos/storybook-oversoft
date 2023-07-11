@@ -10,10 +10,9 @@ interface InputComponentProps {
 }
 
 const InputComponent: FC<InputComponentProps> = (props) => {
-
   const onChangeHandler = (value: string) => {
-    !props.disabled &&  props.onChange(value)
-  }
+    !props.disabled && props.onChange(value);
+  };
 
   return (
     <InputWrapperStyled>

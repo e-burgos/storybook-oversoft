@@ -14,7 +14,9 @@ test('Input', async () => {
 
 test('Input disabled', async () => {
   const onChangeMock = jest.fn();
-  const view = render(<InputComponent disabled={true} type="text" label="Name" onChange={onChangeMock} value="value" />);
+  const view = render(
+    <InputComponent disabled={true} type="text" label="Name" onChange={onChangeMock} value="value" />
+  );
   expect(view).toBeDefined();
   fireEvent.change(screen.getByTestId('Name'), { target: { value: 'value2' } });
   expect(onChangeMock).not.toHaveBeenCalled();
