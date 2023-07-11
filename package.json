@@ -1,14 +1,14 @@
 {
   "name": "oversoft-ui",
   "main": "./dist/index.js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "scripts": {
     "dev": "storybook dev -p 6006",
     "start": "npx http-server -p 8080 ./storybook-static",
     "build": "storybook build",
     "docs": "storybook dev --docs",
-    "publish": "npm run clean && npm run export-components && npm run dist && npm run publish-version && npm run build && npm run chromatic",
+    "publish-package": "npm run clean && npm run export-components && npm run dist && npm run publish-version && npm run build && npm run chromatic",
     "export-components": "rm -rf ./src/index.tsx && node ./scripts/exportComponentsFromIndex",
     "publish-version": "node ./scripts/setPublishJson",
     "test": "jest test --coverage --watchAll=false --passWithNoTests",

@@ -43,7 +43,7 @@ Como resultado tendremos la ruta del componente de la siguente manera `src/Asset
 
 ## Conexion de componentes con Chromatic
 
-1. Para publicar la libreria en chromatic solo se debe corren el comando `npm run chomatic`.
+1. Para publicar la libreria solo se debe corren el comando `npm run publish-package`.
 2. Esperar a que finalice, al finalizar debe mostrar el link del proyecto actualizado.
 
 ## Prueba local de los componentes
@@ -51,8 +51,7 @@ Como resultado tendremos la ruta del componente de la siguente manera `src/Asset
 1. Hacer un `npm run build` de la libería para compilar los componentes.
 2. Hacer un `npm run test` para correr todas las pruebas.
 3. Hacer un `npm run dist` para generar los archivos .js y .d dentro la carpeta dist.
-4. Es necesario agregar en el archivo src/index.ts la importación y exportacion de todos los componentes.
-5. Dentro de tu proyecto de React, instalar el paquete recién generado con el comando `npm i storybook-oversoft`.
+4. Dentro de tu proyecto de React, instalar el paquete recién generado con el comando `npm i oversoft-ui`.
 
 ## Versionado Semántico
 
