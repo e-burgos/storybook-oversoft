@@ -1,33 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input Test 1`] = `
+exports[`Input 1`] = `
 .c0 {
   width: 100%;
 }
 
 .c1 {
   width: 100%;
-  color: var(--oversoft-grey-scale-dark-grey, #333);
+  color: #333333;
   leading-trim: both;
   text-edge: cap;
-  font-family: Rubik;
+  font-family: Rubik-Black;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+  opacity: 1;
 }
 
 .c2 {
+  color: #666666;
   display: flex;
-  height: 30px;
+  height: 20px;
   width: 100%;
   justify-content: flex-end;
   align-items: center;
   gap: 8px;
   align-self: stretch;
+  padding: 5px;
   border-radius: 8px;
+  font-family: Rubik-Regular;
   border: 1px solid var(--oversoft-grey-scale-stroke-grey, rgba(198, 196, 196, 0.53));
   outline: none;
+  opacity: 1;
 }
 
 <div>
@@ -42,6 +47,62 @@ exports[`Input Test 1`] = `
     <input
       class="c2"
       data-testid="Name"
+      type="text"
+      value="value"
+    />
+  </div>
+</div>
+`;
+
+exports[`Input disabled 1`] = `
+.c0 {
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+  color: #333333;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Rubik-Black;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  opacity: .3;
+}
+
+.c2 {
+  color: #666666;
+  display: flex;
+  height: 20px;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  padding: 5px;
+  border-radius: 8px;
+  font-family: Rubik-Regular;
+  border: 1px solid var(--oversoft-grey-scale-stroke-grey, rgba(198, 196, 196, 0.53));
+  outline: none;
+  opacity: .3;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      disabled=""
+    >
+      Name
+    </label>
+    <input
+      class="c2"
+      data-testid="Name"
+      disabled=""
       type="text"
       value="value"
     />

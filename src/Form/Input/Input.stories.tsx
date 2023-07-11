@@ -10,10 +10,21 @@ const meta: Meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Input: Story = {
   args: {
     type: 'text',
     label: 'label',
     value: 'value',
+    onChange: (value: string) => console.log(value),
+  },
+};
+
+export const InputDisabled: Story = {
+  args: {
+    type: 'text',
+    label: 'label',
+    value: 'value',
+    disabled: true,
+    onChange: (value: string) => console.log(value),
   },
 };
