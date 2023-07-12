@@ -3,7 +3,7 @@
 exports[`Modal is closing 1`] = `
 .c0 {
   display: flex;
-  opacity: 0;
+  opacity: 1;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -70,8 +70,8 @@ exports[`Modal is closing 1`] = `
 
 @media (min-width: 768px) {
   .c1 {
-    width: 600%;
-    max-height: 400%;
+    width: 600px;
+    min-height: 400px;
   }
 }
 
@@ -82,8 +82,7 @@ exports[`Modal is closing 1`] = `
     >
       <div
         class="c1"
-        maxheight="400"
-        width="600"
+        width="600px"
       >
         <div
           class="c2"
@@ -115,7 +114,7 @@ exports[`Modal is closing 1`] = `
 exports[`Modal is closing 2`] = `
 .c0 {
   display: flex;
-  opacity: 0;
+  opacity: 1;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -182,8 +181,8 @@ exports[`Modal is closing 2`] = `
 
 @media (min-width: 768px) {
   .c1 {
-    width: 600%;
-    max-height: 400%;
+    width: 600px;
+    min-height: 400px;
   }
 }
 
@@ -194,8 +193,7 @@ exports[`Modal is closing 2`] = `
     >
       <div
         class="c1"
-        maxheight="400"
-        width="600"
+        width="600px"
       >
         <div
           class="c2"
@@ -224,6 +222,16 @@ exports[`Modal is closing 2`] = `
 </div>
 `;
 
+exports[`Modal is closing 3`] = `
+@media (min-width: 768px) {
+
+}
+
+<div>
+  <div />
+</div>
+`;
+
 exports[`Modal is opening 1`] = `
 <div>
   <div />
@@ -233,7 +241,7 @@ exports[`Modal is opening 1`] = `
 exports[`Modal is opening 2`] = `
 .c0 {
   display: flex;
-  opacity: 0;
+  opacity: 1;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -300,8 +308,8 @@ exports[`Modal is opening 2`] = `
 
 @media (min-width: 768px) {
   .c1 {
-    width: 600%;
-    max-height: 400%;
+    width: 600px;
+    min-height: 400px;
   }
 }
 
@@ -312,8 +320,7 @@ exports[`Modal is opening 2`] = `
     >
       <div
         class="c1"
-        maxheight="400"
-        width="600"
+        width="600px"
       >
         <div
           class="c2"

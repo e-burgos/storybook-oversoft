@@ -17,15 +17,15 @@ export const BackDropModalShadow = styled.div<{ $isOpen: boolean }>`
   transition: opacity 0.2s ease-in;
 `;
 
-export const ModalWrapper = styled.div<{ width: number; maxHeight: number }>`
+export const ModalWrapper = styled.div<{ width: string; $minHeight: string }>`
   width: 95%;
   background: #eee;
   box-shadow: 1px 1px 5px grey;
   max-height: 95%;
   border-radius: 8px;
   @media (min-width: ${MediaQueryRulesEnum.mobile}) {
-    width: ${(props) => props.width}%;
-    max-height: ${(props) => props.maxHeight}%;
+    width: ${(props) => props.width};
+    min-height: ${(props) => props.$minHeight};
   }
 `;
 
