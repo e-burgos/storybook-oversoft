@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import MediaQueryRulesEnum from '../../mediaQueryRules';
 
-export const BackDropModalShadow = styled.div<{ isOpen: boolean }>`
+export const BackDropModalShadow = styled.div<{ $isOpen: boolean }>`
   display: flex;
-  opacity: ${(props) => (props.isOpen ? '1' : '0')};
+  opacity: ${(props) => (props.$isOpen ? '1' : '0')};
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -16,12 +17,16 @@ export const BackDropModalShadow = styled.div<{ isOpen: boolean }>`
   transition: opacity 0.2s ease-in;
 `;
 
-export const ModalWrapper = styled.div<{ size: 'S' | 'M' | 'L' }>`
-  width: ${(props) => (props.size === 'M' ? '70%' : props.size === 'S' ? '35%' : '90%')};
+export const ModalWrapper = styled.div<{ width: number; maxHeight: number }>`
+  width: 95%;
   background: #eee;
   box-shadow: 1px 1px 5px grey;
-  max-height: 90%;
+  max-height: 95%;
   border-radius: 8px;
+  @media (min-width: ${MediaQueryRulesEnum.mobile}) {
+    width: ${(props) => props.width}%;
+    max-height: ${(props) => props.maxHeight}%;
+  }
 `;
 
 export const ModalHeader = styled.div`
@@ -32,6 +37,7 @@ export const ModalHeader = styled.div`
 `;
 
 export const ModalContent = styled.div`
+  font-family: Rubik;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -40,6 +46,7 @@ export const ModalContent = styled.div`
   max-height: 80vh;
   width: 100%;
   margin: 0%;
+  padding: 10px;
 `;
 
 export const ModalCloseButton = styled.button`

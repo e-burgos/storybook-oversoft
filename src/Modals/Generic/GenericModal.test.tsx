@@ -5,7 +5,7 @@ import { render, screen, fireEvent, act } from '@testing-library/react';
 test('Modal is opening', async () => {
   const onCloseHandlerMock = jest.fn();
   const view = render(
-    <GenericModalComponent size="M" title="Title Modal" isOpen={false} onClose={onCloseHandlerMock}>
+    <GenericModalComponent width={600} maxHeight={400} title="Title Modal" isOpen={false} onClose={onCloseHandlerMock}>
       <h1>This is the Content</h1>
     </GenericModalComponent>
   );
@@ -15,7 +15,7 @@ test('Modal is opening', async () => {
 
   await act(() => {
     view.rerender(
-      <GenericModalComponent size="M" title="Title Modal" isOpen={true} onClose={onCloseHandlerMock}>
+      <GenericModalComponent width={600} maxHeight={400} title="Title Modal" isOpen={true} onClose={onCloseHandlerMock}>
         <h1>This is the Content</h1>
       </GenericModalComponent>
     );
@@ -28,7 +28,7 @@ test('Modal is closing', async () => {
   const onCloseHandlerMock = jest.fn();
 
   const view = render(
-    <GenericModalComponent size="M" title="Title Modal" isOpen={true} onClose={onCloseHandlerMock}>
+    <GenericModalComponent width={600} maxHeight={400} title="Title Modal" isOpen={true} onClose={onCloseHandlerMock}>
       <h1>This is the Content</h1>
     </GenericModalComponent>
   );

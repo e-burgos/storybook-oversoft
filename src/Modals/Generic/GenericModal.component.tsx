@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import {
   BackDropModalShadow,
   ModalCloseButton,
@@ -16,7 +17,8 @@ const timer = (time: number) =>
   });
 
 const GenericModalComponent = (props: {
-  size: 'S' | 'M' | 'L';
+  width: number;
+  maxHeight: number;
   title: string;
   isOpen: boolean;
   children: React.ReactNode;
@@ -48,8 +50,8 @@ const GenericModalComponent = (props: {
   return (
     <div>
       {isRendered ? (
-        <BackDropModalShadow isOpen={isOpenAnimation}>
-          <ModalWrapper size={props.size}>
+        <BackDropModalShadow $isOpen={isOpenAnimation}>
+          <ModalWrapper width={props.width} maxHeight={props.maxHeight}>
             <ModalHeader>
               <ModalCloseButton onClick={onClickHandler} data-testid="modalCloseButton"></ModalCloseButton>
               <ModalTitle
