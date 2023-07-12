@@ -12,7 +12,7 @@ const run = async () => {
   const data = await readFile(path.join(root, 'package.json'));
   const { version, name } = JSON.parse(data.toString());
 
-  const UPLOAD_ARTIFACT = `${name.replace('@', '').replace('/', '-')}-${version}.tgz`;
+  const UPLOAD_ARTIFACT = `${name.replace('@', '').replace('/', '-')}-${version}`;
   console.log('Packager: publish.json artifact ', UPLOAD_ARTIFACT);
 
   const publish = {
