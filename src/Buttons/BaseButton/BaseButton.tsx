@@ -1,7 +1,7 @@
 import React from 'react';
 import Spinner from '../../Assets/Spinner';
 import { Button, LoadingTitle, Title } from './BaseButton.styles';
-import { IFontFamily } from '../../types';
+import { FontFamilyType } from '../../types';
 
 export interface BaseButtonProps {
   disabled?: boolean;
@@ -11,7 +11,7 @@ export interface BaseButtonProps {
   colorText?: string;
   hoverColorText?: string;
   textSize?: string;
-  fontText?: IFontFamily;
+  fontText?: FontFamilyType;
   border?: string;
   borderColor?: string;
   hoverBorderColor?: string;

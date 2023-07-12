@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import colors from '../../color-palette';
-import { IFontFamily } from '../../types';
+import { FontFamilyType } from '../../types';
 
 interface TitleProps {
   colorText?: string;
   hoverColorText?: string;
   textSize?: string;
-  fontText?: IFontFamily;
+  fontText?: FontFamilyType;
 }
 
 interface ButtonProps {

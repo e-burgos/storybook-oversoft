@@ -1,4 +1,4 @@
-export type IFontFamily =
+export type FontFamilyType =
   | 'Rubik-Black'
   | 'Rubik-Light'
   | 'Rubik-Medium'
