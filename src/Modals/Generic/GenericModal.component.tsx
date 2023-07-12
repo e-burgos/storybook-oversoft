@@ -9,11 +9,11 @@ import {
   ModalWrapper,
 } from './GenericModal.styles';
 
-const timer = (time: number) =>
+const timerHelper = (time: number) =>
   new Promise((resolve) => {
     setTimeout(() => {
       resolve(null);
-    }, time);
+    }, time * 1000);
   });
 
 const GenericModalComponent = (props: {
@@ -23,6 +23,7 @@ const GenericModalComponent = (props: {
   isOpen: boolean;
   children: React.ReactNode;
   onClose: () => void;
+  seconds: number;
 }) => {
   const [isRendered, setIsRendered] = useState<boolean>(false);
   const [isOpenAnimation, setIsOpenAnimation] = useState<boolean>(false);
@@ -34,11 +35,11 @@ const GenericModalComponent = (props: {
   const changeAnimation = async (isOpen: boolean) => {
     if (isOpen) {
       setIsRendered(true);
-      process.env.NODE_ENV !== 'test' && (await timer(100));
+      await timerHelper(props.seconds);
       setIsOpenAnimation(true);
     } else {
       setIsOpenAnimation(false);
-      process.env.NODE_ENV !== 'test' && (await timer(600));
+      await timerHelper(props.seconds);
       setIsRendered(false);
     }
   };
@@ -50,7 +51,7 @@ const GenericModalComponent = (props: {
   return (
     <div>
       {isRendered ? (
-        <BackDropModalShadow $isOpen={isOpenAnimation}>
+        <BackDropModalShadow $isOpen={isOpenAnimation} seconds={props.seconds}>
           <ModalWrapper width={props.width} $minHeight={props.minHeight}>
             <ModalHeader>
               <ModalCloseButton onClick={onClickHandler} data-testid="modalCloseButton"></ModalCloseButton>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import MediaQueryRulesEnum from '../../mediaQueryRules';
 
-export const BackDropModalShadow = styled.div<{ $isOpen: boolean }>`
+export const BackDropModalShadow = styled.div<{ $isOpen: boolean; seconds: number }>`
   display: flex;
   opacity: ${(props) => (props.$isOpen ? '1' : '0')};
   justify-content: center;
@@ -14,7 +14,7 @@ export const BackDropModalShadow = styled.div<{ $isOpen: boolean }>`
   top: 0;
   left: 0;
   z-index: 900;
-  transition: opacity 0.2s ease-in;
+  transition: opacity ${(props) => props.seconds}s ease-in;
 `;
 
 export const ModalWrapper = styled.div<{ width: string; $minHeight: string }>`

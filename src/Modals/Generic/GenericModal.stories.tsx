@@ -18,7 +18,8 @@ export const Modal: Story = {
       onClose={args.onClose}
       minHeight={args.minHeight}
       width={args.width}
-      title="Title modal"
+      title={args.title}
+      seconds={args.seconds}
     >
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -40,6 +41,7 @@ export const Modal: Story = {
     minHeight: '400px',
     title: 'Title Modal',
     isOpen: true,
+    seconds: 0.2,
     onClose: () => alert('Close !!!'),
   },
 };
