@@ -3,7 +3,7 @@ import Company from './Company';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Company',
+  title: 'Assets/Menu/Company',
   component: Company,
   tags: ['autodocs'],
   argTypes: {

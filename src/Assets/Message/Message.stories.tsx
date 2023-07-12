@@ -3,7 +3,7 @@ import Message from './Message';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Message',
+  title: 'Assets/Actions/Message',
   component: Message,
   tags: ['autodocs'],
   argTypes: {

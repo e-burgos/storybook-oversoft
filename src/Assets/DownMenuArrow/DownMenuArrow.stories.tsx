@@ -3,7 +3,7 @@ import DownMenuArrow from './DownMenuArrow';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/DownMenuArrow',
+  title: 'Assets/Arrows/DownMenuArrow',
   component: DownMenuArrow,
   tags: ['autodocs'],
   argTypes: {

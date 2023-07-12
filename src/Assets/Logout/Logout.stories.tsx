@@ -3,7 +3,7 @@ import Logout from './Logout';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Logout',
+  title: 'Assets/Menu/Logout',
   component: Logout,
   tags: ['autodocs'],
   argTypes: {

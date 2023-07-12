@@ -3,7 +3,7 @@ import Reports from './Reports';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Reports',
+  title: 'Assets/Menu/Reports',
   component: Reports,
   tags: ['autodocs'],
   argTypes: {

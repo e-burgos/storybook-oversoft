@@ -3,7 +3,7 @@ import Security from './Security';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Security',
+  title: 'Assets/Menu/Security',
   component: Security,
   tags: ['autodocs'],
   argTypes: {

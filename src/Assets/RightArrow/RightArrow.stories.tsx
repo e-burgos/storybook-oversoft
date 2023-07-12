@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import RightArrow from './RightArrow';
 
 const meta: Meta = {
-  title: 'Assets/RightArrow',
+  title: 'Assets/Arrows/RightArrow',
   component: RightArrow,
   tags: ['autodocs'],
   argTypes: {

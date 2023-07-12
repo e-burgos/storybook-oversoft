@@ -3,7 +3,7 @@ import List from './List';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/List',
+  title: 'Assets/Menu/List',
   component: List,
   tags: ['autodocs'],
   argTypes: {
