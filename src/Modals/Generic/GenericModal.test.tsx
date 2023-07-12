@@ -11,6 +11,7 @@ test('Modal is opening', async () => {
       title="Title Modal"
       isOpen={false}
       onClose={onCloseHandlerMock}
+      seconds={0}
     >
       <h1>This is the Content</h1>
     </GenericModalComponent>
@@ -27,6 +28,7 @@ test('Modal is opening', async () => {
         title="Title Modal"
         isOpen={true}
         onClose={onCloseHandlerMock}
+        seconds={0}
       >
         <h1>This is the Content</h1>
       </GenericModalComponent>
@@ -46,6 +48,7 @@ test('Modal is closing', async () => {
       title="Title Modal"
       isOpen={true}
       onClose={onCloseHandlerMock}
+      seconds={0}
     >
       <h1>This is the Content</h1>
     </GenericModalComponent>
@@ -66,9 +69,10 @@ test('Modal is closing', async () => {
       <GenericModalComponent
         width="600px"
         minHeight="400px"
-        title="Title Modal2"
+        title="Title Modal"
         isOpen={false}
         onClose={onCloseHandlerMock}
+        seconds={0}
       >
         <h1>This is the Content</h1>
       </GenericModalComponent>
