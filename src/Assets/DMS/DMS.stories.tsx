@@ -3,7 +3,7 @@ import DMS from './DMS';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/DMS',
+  title: 'Assets/Logos/DMS',
   component: DMS,
   tags: ['autodocs'],
   argTypes: {

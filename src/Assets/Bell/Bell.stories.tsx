@@ -3,7 +3,7 @@ import Bell from './Bell';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Bell',
+  title: 'Assets/Actions/Bell',
   component: Bell,
   tags: ['autodocs'],
   argTypes: {

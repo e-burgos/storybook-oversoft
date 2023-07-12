@@ -3,7 +3,7 @@ import Home from './Home';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Home',
+  title: 'Assets/Menu/Home',
   component: Home,
   tags: ['autodocs'],
   argTypes: {

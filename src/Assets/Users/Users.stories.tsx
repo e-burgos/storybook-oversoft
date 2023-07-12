@@ -3,7 +3,7 @@ import Users from './Users';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Users',
+  title: 'Assets/Menu/Users',
   component: Users,
   tags: ['autodocs'],
   argTypes: {

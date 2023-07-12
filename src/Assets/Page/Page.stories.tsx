@@ -3,7 +3,7 @@ import Page from './Page';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Page',
+  title: 'Assets/Menu/Page',
   component: Page,
   tags: ['autodocs'],
   argTypes: {

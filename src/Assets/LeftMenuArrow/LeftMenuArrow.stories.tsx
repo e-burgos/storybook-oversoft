@@ -3,7 +3,7 @@ import LeftMenuArrow from './LeftMenuArrow';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/LeftMenuArrow',
+  title: 'Assets/Arrows/LeftMenuArrow',
   component: LeftMenuArrow,
   tags: ['autodocs'],
   argTypes: {

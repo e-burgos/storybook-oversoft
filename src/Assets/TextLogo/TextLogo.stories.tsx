@@ -3,7 +3,7 @@ import TextLogo from './TextLogo';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/TextLogo',
+  title: 'Assets/Logos/TextLogo',
   component: TextLogo,
   tags: ['autodocs'],
   argTypes: {

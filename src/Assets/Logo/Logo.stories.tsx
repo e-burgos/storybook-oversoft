@@ -3,7 +3,7 @@ import Logo from './Logo';
 import colors from '../../color-palette';
 
 const meta: Meta = {
-  title: 'Assets/Logo',
+  title: 'Assets/Logos/Logo',
   component: Logo,
   tags: ['autodocs'],
   argTypes: {
