@@ -1,11 +1,17 @@
 import React from 'react';
 import GenericModalComponent from './GenericModal.component';
-import { render, screen, fireEvent, act } from '@testing-library/react';
+import { render, act, fireEvent } from '@testing-library/react';
 
 test('Modal is opening', async () => {
   const onCloseHandlerMock = jest.fn();
   const view = render(
-    <GenericModalComponent width={600} maxHeight={400} title="Title Modal" isOpen={false} onClose={onCloseHandlerMock}>
+    <GenericModalComponent
+      width="600px"
+      minHeight="400px"
+      title="Title Modal"
+      isOpen={false}
+      onClose={onCloseHandlerMock}
+    >
       <h1>This is the Content</h1>
     </GenericModalComponent>
   );
@@ -15,7 +21,13 @@ test('Modal is opening', async () => {
 
   await act(() => {
     view.rerender(
-      <GenericModalComponent width={600} maxHeight={400} title="Title Modal" isOpen={true} onClose={onCloseHandlerMock}>
+      <GenericModalComponent
+        width="600px"
+        minHeight="400px"
+        title="Title Modal"
+        isOpen={true}
+        onClose={onCloseHandlerMock}
+      >
         <h1>This is the Content</h1>
       </GenericModalComponent>
     );
@@ -28,7 +40,13 @@ test('Modal is closing', async () => {
   const onCloseHandlerMock = jest.fn();
 
   const view = render(
-    <GenericModalComponent width={600} maxHeight={400} title="Title Modal" isOpen={true} onClose={onCloseHandlerMock}>
+    <GenericModalComponent
+      width="600px"
+      minHeight="400px"
+      title="Title Modal"
+      isOpen={true}
+      onClose={onCloseHandlerMock}
+    >
       <h1>This is the Content</h1>
     </GenericModalComponent>
   );
@@ -37,9 +55,25 @@ test('Modal is closing', async () => {
   expect(view.container).toMatchSnapshot();
 
   await act(() => {
-    fireEvent.click(screen.getByTestId('modalCloseButton'));
+    fireEvent.click(view.getByTestId('modalCloseButton'));
   });
 
   expect(view.container).toMatchSnapshot();
   expect(onCloseHandlerMock).toHaveBeenCalled();
+
+  await act(() => {
+    view.rerender(
+      <GenericModalComponent
+        width="600px"
+        minHeight="400px"
+        title="Title Modal2"
+        isOpen={false}
+        onClose={onCloseHandlerMock}
+      >
+        <h1>This is the Content</h1>
+      </GenericModalComponent>
+    );
+  });
+
+  expect(view.container).toMatchSnapshot();
 });

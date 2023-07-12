@@ -13,7 +13,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Modal: Story = {
   render: (args) => (
-    <ModalComponent isOpen={args.isOpen} onClose={args.onClose} size={args.size} title="Title modal">
+    <ModalComponent
+      isOpen={args.isOpen}
+      onClose={args.onClose}
+      minHeight={args.minHeight}
+      width={args.width}
+      title="Title modal"
+    >
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -30,7 +36,8 @@ export const Modal: Story = {
     </ModalComponent>
   ),
   args: {
-    size: 'M',
+    width: '600px',
+    minHeight: '400px',
     title: 'Title Modal',
     isOpen: true,
     onClose: () => alert('Close !!!'),

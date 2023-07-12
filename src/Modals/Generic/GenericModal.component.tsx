@@ -17,8 +17,8 @@ const timer = (time: number) =>
   });
 
 const GenericModalComponent = (props: {
-  width: number;
-  maxHeight: number;
+  width: string;
+  minHeight: string;
   title: string;
   isOpen: boolean;
   children: React.ReactNode;
@@ -34,11 +34,11 @@ const GenericModalComponent = (props: {
   const changeAnimation = async (isOpen: boolean) => {
     if (isOpen) {
       setIsRendered(true);
-      await timer(100);
+      process.env.NODE_ENV !== 'test' && (await timer(100));
       setIsOpenAnimation(true);
     } else {
       setIsOpenAnimation(false);
-      await timer(600);
+      process.env.NODE_ENV !== 'test' && (await timer(600));
       setIsRendered(false);
     }
   };
@@ -51,7 +51,7 @@ const GenericModalComponent = (props: {
     <div>
       {isRendered ? (
         <BackDropModalShadow $isOpen={isOpenAnimation}>
-          <ModalWrapper width={props.width} maxHeight={props.maxHeight}>
+          <ModalWrapper width={props.width} $minHeight={props.minHeight}>
             <ModalHeader>
               <ModalCloseButton onClick={onClickHandler} data-testid="modalCloseButton"></ModalCloseButton>
               <ModalTitle
