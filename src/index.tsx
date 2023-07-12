@@ -23,3 +23,5 @@ export { default as Tables_DataTable } from './Tables/DataTable';
 export { default as Buttons_SecondaryButton } from './Buttons/SecondaryButton';
 export { default as Tables_TablePagination } from './Tables/TablePagination';
 export { default as Form_Input } from './Form/Input';
+
+export { default as Modal_Generic } from './Modals/Generic';

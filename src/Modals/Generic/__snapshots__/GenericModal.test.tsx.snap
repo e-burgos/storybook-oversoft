@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal is closing 1`] = `
+.c0 {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  transition: opacity 0.2s ease-in;
+}
+
+.c1 {
+  width: 95%;
+  background: #eee;
+  box-shadow: 1px 1px 5px grey;
+  max-height: 95%;
+  border-radius: 8px;
+}
+
+.c2 {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px;
+  margin: 0px;
+}
+
+.c5 {
+  font-family: Rubik;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 80vh;
+  width: 100%;
+  margin: 0%;
+  padding: 10px;
+}
+
+.c3 {
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #bbb;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.c3:before {
+  content: '✖';
+}
+
+.c4 {
+  color: var(--oversoft-total-black, #1a1b1e);
+  font-family: Rubik;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .c1 {
+    width: 600%;
+    max-height: 400%;
+  }
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+        maxheight="400"
+        width="600"
+      >
+        <div
+          class="c2"
+        >
+          <button
+            class="c3"
+            data-testid="modalCloseButton"
+          />
+          <h1
+            class="c4"
+            style="color: rgb(51, 51, 51); margin-left: 20px; text-align: center; width: 100%; font-size: 23px;"
+          >
+            Title Modal
+          </h1>
+        </div>
+        <div
+          class="c5"
+        >
+          <h1>
+            This is the Content
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal is closing 2`] = `
+.c0 {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  transition: opacity 0.2s ease-in;
+}
+
+.c1 {
+  width: 95%;
+  background: #eee;
+  box-shadow: 1px 1px 5px grey;
+  max-height: 95%;
+  border-radius: 8px;
+}
+
+.c2 {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px;
+  margin: 0px;
+}
+
+.c5 {
+  font-family: Rubik;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 80vh;
+  width: 100%;
+  margin: 0%;
+  padding: 10px;
+}
+
+.c3 {
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #bbb;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.c3:before {
+  content: '✖';
+}
+
+.c4 {
+  color: var(--oversoft-total-black, #1a1b1e);
+  font-family: Rubik;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .c1 {
+    width: 600%;
+    max-height: 400%;
+  }
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+        maxheight="400"
+        width="600"
+      >
+        <div
+          class="c2"
+        >
+          <button
+            class="c3"
+            data-testid="modalCloseButton"
+          />
+          <h1
+            class="c4"
+            style="color: rgb(51, 51, 51); margin-left: 20px; text-align: center; width: 100%; font-size: 23px;"
+          >
+            Title Modal
+          </h1>
+        </div>
+        <div
+          class="c5"
+        >
+          <h1>
+            This is the Content
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Modal is opening 1`] = `
+<div>
+  <div />
+</div>
+`;
+
+exports[`Modal is opening 2`] = `
+.c0 {
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  transition: opacity 0.2s ease-in;
+}
+
+.c1 {
+  width: 95%;
+  background: #eee;
+  box-shadow: 1px 1px 5px grey;
+  max-height: 95%;
+  border-radius: 8px;
+}
+
+.c2 {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px;
+  margin: 0px;
+}
+
+.c5 {
+  font-family: Rubik;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 80vh;
+  width: 100%;
+  margin: 0%;
+  padding: 10px;
+}
+
+.c3 {
+  background: none;
+  border: none;
+  font-size: 25px;
+  color: #bbb;
+  cursor: pointer;
+  font-weight: lighter;
+}
+
+.c3:before {
+  content: '✖';
+}
+
+.c4 {
+  color: var(--oversoft-total-black, #1a1b1e);
+  font-family: Rubik;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 10px;
+}
+
+@media (min-width: 768px) {
+  .c1 {
+    width: 600%;
+    max-height: 400%;
+  }
+}
+
+<div>
+  <div>
+    <div
+      class="c0"
+    >
+      <div
+        class="c1"
+        maxheight="400"
+        width="600"
+      >
+        <div
+          class="c2"
+        >
+          <button
+            class="c3"
+            data-testid="modalCloseButton"
+          />
+          <h1
+            class="c4"
+            style="color: rgb(51, 51, 51); margin-left: 20px; text-align: center; width: 100%; font-size: 23px;"
+          >
+            Title Modal
+          </h1>
+        </div>
+        <div
+          class="c5"
+        >
+          <h1>
+            This is the Content
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
