@@ -16,10 +16,10 @@ interface InputComponentProps {
   textSize?: string;
   textSizeLabel?: string;
   colorFocus?: string;
-  onFocus: React.FocusEventHandler<HTMLInputElement>;
-  onBlur: React.FocusEventHandler<HTMLInputElement>;
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
-  onKeyDown: React.KeyboardEventHandler<HTMLInputElement>;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onKeyDown?: React.KeyboardEventHandler<HTMLInputElement>;
 }
 
 const InputComponent = ({

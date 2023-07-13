@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { Label, SliderRound, Switch, Wrapper } from './Toggle.styles';
-import { IFontFamily } from '../../types';
+import { FontFamilyType } from '../../types';
 import { primary, neutrals } from '../../color-palette';
 export interface IToggleComponentProps {
   label?: string;
   isToggled: boolean;
   onClick: () => void;
-  fontFamily?: IFontFamily;
+  fontFamily?: FontFamilyType;
   fontSize?: string;
   togglePrimaryColor?: string;
   toggleNeutralColor?: string;

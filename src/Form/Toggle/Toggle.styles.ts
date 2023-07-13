@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { IFontFamily } from '../../types';
+import { FontFamilyType } from '../../types';
 
 export const Wrapper = styled.div<{ $disabled: boolean }>`
   display: flex;
@@ -8,7 +8,7 @@ export const Wrapper = styled.div<{ $disabled: boolean }>`
   opacity: ${(props) => (props.$disabled ? '0.5' : '1')};
 `;
 
-export const Label = styled.label<{ fontFamily: IFontFamily; fontSize: string }>`
+export const Label = styled.label<{ fontFamily: FontFamilyType; fontSize: string }>`
   font-family: ${(props) => props.fontFamily};
   font-size: 12px;
   margin-right: 8px;
