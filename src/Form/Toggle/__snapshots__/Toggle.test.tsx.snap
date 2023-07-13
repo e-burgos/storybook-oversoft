@@ -1,0 +1,265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Toggle with default props 1`] = `
+.c0 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  opacity: 1;
+}
+
+.c1 {
+  font-family: Rubik-Bold;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  background: #9D9D9D;
+  border-radius: 100px;
+  width: 42.272px;
+}
+
+.c3 {
+  flex-shrink: 0;
+  fill: var(--system-colors-scl-white, #fff);
+  filter: drop-shadow(0px 1.0458389520645142px 2.0916779041290283px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0.10458389669656754px 0.3137516975402832px rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  top: -6px;
+  left: -2px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  content: '';
+  height: 26px;
+  width: 26px;
+  background-color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      font-family="Rubik-Bold"
+      font-size="12px"
+    />
+    <label
+      class="c2"
+      data-testid=""
+    >
+      <span
+        class="c3"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Render disabled Toggle 1`] = `
+.c0 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  opacity: 0.5;
+}
+
+.c1 {
+  font-family: Rubik-Bold;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  background: #9D9D9D;
+  border-radius: 100px;
+  width: 42.272px;
+}
+
+.c3 {
+  flex-shrink: 0;
+  fill: var(--system-colors-scl-white, #fff);
+  filter: drop-shadow(0px 1.0458389520645142px 2.0916779041290283px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0.10458389669656754px 0.3137516975402832px rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  top: -6px;
+  left: -2px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  content: '';
+  height: 26px;
+  width: 26px;
+  background-color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      font-family="Rubik-Bold"
+      font-size="12px"
+    />
+    <label
+      class="c2"
+      data-testid=""
+    >
+      <span
+        class="c3"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`onClick Toggle 1`] = `
+.c0 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  opacity: 1;
+}
+
+.c1 {
+  font-family: Rubik-Bold;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  background: #9D9D9D;
+  border-radius: 100px;
+  width: 42.272px;
+}
+
+.c3 {
+  flex-shrink: 0;
+  fill: var(--system-colors-scl-white, #fff);
+  filter: drop-shadow(0px 1.0458389520645142px 2.0916779041290283px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0.10458389669656754px 0.3137516975402832px rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  top: -6px;
+  left: -2px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  content: '';
+  height: 26px;
+  width: 26px;
+  background-color: #FFFFFF;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      font-family="Rubik-Bold"
+      font-size="12px"
+    >
+      This is the Toggle
+    </label>
+    <label
+      class="c2"
+      data-testid="This is the Toggle"
+    >
+      <span
+        class="c3"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`onClick Toggle 2`] = `
+.c0 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  opacity: 1;
+}
+
+.c1 {
+  font-family: Rubik-Bold;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  background: #D41F3450;
+  border-radius: 100px;
+  width: 42.272px;
+}
+
+.c3 {
+  flex-shrink: 0;
+  fill: var(--system-colors-scl-white, #fff);
+  filter: drop-shadow(0px 1.0458389520645142px 2.0916779041290283px rgba(0, 0, 0, 0.2)) drop-shadow(0px 0.10458389669656754px 0.3137516975402832px rgba(0, 0, 0, 0.1));
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  top: -6px;
+  left: 19px;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  content: '';
+  height: 26px;
+  width: 26px;
+  background-color: #D41F34;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      font-family="Rubik-Bold"
+      font-size="12px"
+    >
+      This is the Toggle
+    </label>
+    <label
+      class="c2"
+      data-testid="This is the Toggle"
+    >
+      <span
+        class="c3"
+      />
+    </label>
+  </div>
+</div>
+`;
