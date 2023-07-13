@@ -26,6 +26,7 @@ const neutrals = {
   greyTwo: '#666666',
   greyThree: '#9D9D9D',
   greyLight: '#FAFAFA',
+  greyBorder: '#E0E0E0',
   white: '#FFFFFF',
 };
 
