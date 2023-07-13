@@ -31,3 +31,4 @@ export { default as Tables_TablePagination } from './Tables/TablePagination';
 export { default as Tables_DataTable } from './Tables/DataTable';
 export { default as Assets_Spinner } from './Assets/Spinner';
 export { default as Buttons_SecondaryButton } from './Buttons/SecondaryButton';
+export { default as Form_Toggle } from './Form/Toggle';
