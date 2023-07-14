@@ -1,11 +1,11 @@
-import React, { HTMLInputTypeAttribute, useState } from 'react';
+import React, { HTMLInputTypeAttribute } from 'react';
 import { InputStyled, InputWrapperStyled, LabelStyled } from './Input.styles';
 import { FontFamilyType } from '../../types';
 
-interface InputComponentProps {
+export interface InputComponentProps {
   type?: HTMLInputTypeAttribute;
   label?: string;
-  value?: string;
+  value: string;
   disabled?: boolean;
   placeholder?: string;
   width?: string;
@@ -16,10 +16,10 @@ interface InputComponentProps {
   textSize?: string;
   textSizeLabel?: string;
   colorFocus?: string;
-  onFocus: React.FocusEventHandler<HTMLInputElement>;
-  onBlur: React.FocusEventHandler<HTMLInputElement>;
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
-  onKeyDown: React.KeyboardEventHandler<HTMLInputElement>;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onKeyDown?: React.KeyboardEventHandler<HTMLInputElement>;
 }
 
 const InputComponent = ({
@@ -36,23 +36,11 @@ const InputComponent = ({
   fontText,
   fontTextLabel,
   colorFocus,
-  onKeyDown,
+  onKeyDown: onKeyDownHandler,
+  onChange: onChangeHandler,
+  onBlur: onBlurHandler,
+  onFocus: onFocusHandler,
 }: InputComponentProps) => {
-  const [inputValue, setInputValue] = useState(value);
-  const [inputFocus, setInputFocus] = useState(false);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleInputOnFocus = () => {
-    setInputFocus(true);
-  };
-
-  const handleInputOnBlur = () => {
-    setInputFocus(false);
-  };
-
   return (
     <InputWrapperStyled>
       <LabelStyled
@@ -66,13 +54,12 @@ const InputComponent = ({
       <InputStyled
         data-testid={label}
         type={type}
-        value={inputValue}
+        value={value}
         disabled={!!disabled}
-        onChange={handleInputChange}
-        onFocus={handleInputOnFocus}
-        $isFocused={inputFocus}
-        onBlur={handleInputOnBlur}
-        onKeyDown={onKeyDown}
+        onChange={onChangeHandler}
+        onFocus={onFocusHandler}
+        onBlur={onBlurHandler}
+        onKeyDown={onKeyDownHandler}
         width={width}
         $textSize={textSize}
         $fontText={fontText}

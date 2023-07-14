@@ -9,7 +9,7 @@ const meta: Meta = {
   argTypes: {
     type: { description: 'string' },
     label: { description: 'string' },
-    value: { description: 'string' },
+    value: { control: 'text', description: 'string' },
     placeholder: { description: 'string' },
     textSize: { description: 'string' },
     textSizeLabel: { description: 'string' },
@@ -39,7 +39,6 @@ export const Input: Story = {
   args: {
     type: 'text',
     label: 'Label',
-    value: 'Value',
     placeholder: 'Ingrese el Texto',
     textSize: '14px',
     textSizeLabel: '14px',
@@ -57,7 +56,6 @@ export const InputDisabled: Story = {
   args: {
     type: 'text',
     label: 'Label',
-    value: 'Value',
     placeholder: 'Ingrese el Texto',
     textSize: '14px',
     textSizeLabel: '14px',
