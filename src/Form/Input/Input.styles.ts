@@ -5,7 +5,6 @@ import { FontFamilyType } from '../../types';
 interface InputProps {
   $width?: string;
   $disabled?: boolean;
-  $isFocused: boolean;
   $textSize?: string;
   $fontText?: FontFamilyType;
   $colorText?: string;

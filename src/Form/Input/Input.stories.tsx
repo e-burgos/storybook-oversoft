@@ -39,7 +39,6 @@ export const Input: Story = {
   args: {
     type: 'text',
     label: 'Label',
-    value: 'Value',
     placeholder: 'Ingrese el Texto',
     textSize: '14px',
     textSizeLabel: '14px',

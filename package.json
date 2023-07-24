@@ -1,14 +1,14 @@
 {
   "name": "oversoft-ui",
   "main": "./dist/index.js",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "private": false,
   "scripts": {
     "dev": "storybook dev -p 6006",
     "start": "npx http-server -p 8080 ./storybook-static",
     "build": "storybook build",
     "docs": "storybook dev --docs",
-    "publish-package": "npm run clean && npm run export-components && npm run dist && npm run publish-version && npm run build && npm run chromatic",
+    "publish-package": "npm run set-public-registry && npm run clean && npm run export-components && npm run dist && npm run publish-version && npm run build && npm run chromatic",
     "export-components": "rm -rf ./src/index.tsx && node ./scripts/exportComponentsFromIndex",
     "publish-version": "node ./scripts/setPublishJson",
     "test": "jest test --coverage --watchAll=false --passWithNoTests",
@@ -17,6 +17,7 @@
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
     "clean": "node ./scripts/rmdir storybook-static",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "set-public-registry": "npm config set registry https://registry.npmjs.org/",
     "chromatic": "npx chromatic@next --project-token=$CHROMATIC_PROJECT_TOKEN --build-script-name build --exit-once-uploaded",
     "dist": "rm -rf dist && npx tsc -p ./tsconfigDist.json"
   },

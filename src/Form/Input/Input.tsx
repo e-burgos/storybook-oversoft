@@ -1,11 +1,11 @@
-import React, { HTMLInputTypeAttribute, useState } from 'react';
+import React, { HTMLInputTypeAttribute } from 'react';
 import { InputStyled, InputWrapperStyled, LabelStyled } from './Input.styles';
 import { FontFamilyType } from '../../types';
 
 interface InputComponentProps {
   type?: HTMLInputTypeAttribute;
   label?: string;
-  value?: string;
+  value?: string | number | readonly string[] | undefined;
   disabled?: boolean;
   placeholder?: string;
   width?: string;
@@ -37,22 +37,10 @@ const InputComponent = ({
   fontTextLabel,
   colorFocus,
   onKeyDown,
+  onChange,
+  onFocus,
+  onBlur,
 }: InputComponentProps) => {
-  const [inputValue, setInputValue] = useState(value);
-  const [inputFocus, setInputFocus] = useState(false);
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-  };
-
-  const handleInputOnFocus = () => {
-    setInputFocus(true);
-  };
-
-  const handleInputOnBlur = () => {
-    setInputFocus(false);
-  };
-
   return (
     <InputWrapperStyled>
       <LabelStyled
@@ -66,12 +54,11 @@ const InputComponent = ({
       <InputStyled
         data-testid={label}
         type={type}
-        value={inputValue}
+        value={value}
         disabled={!!disabled}
-        onChange={handleInputChange}
-        onFocus={handleInputOnFocus}
-        $isFocused={inputFocus}
-        onBlur={handleInputOnBlur}
+        onChange={onChange}
+        onFocus={onFocus}
+        onBlur={onBlur}
         onKeyDown={onKeyDown}
         width={width}
         $textSize={textSize}
